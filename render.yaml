@@ -1,12 +1,7 @@
 services:
   - type: web
-    name: spam-classifier-web-app
+    name: spam-mail-classifier
     env: python
-    plan: free
-    buildCommand: pip install -r Requirement.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: python app.py
-    envVars:
-      - key: FLASK_ENV
-        value: production
-    region: oregon
-    autoDeploy: true
+    pythonVersion: 3.10
